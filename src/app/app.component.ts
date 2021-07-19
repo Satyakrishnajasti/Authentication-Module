@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   isUserLoggedIn = false;
 
   ngOnInit() {
-    let storeData = localStorage.getItem("isUserLoggedIn");
+    /*let storeData = localStorage.getItem("isUserLoggedIn");
 
     console.log("StoreData" + storeData);
 
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       this.isUserLoggedIn = true;
 
     else
-      this.isUserLoggedIn = false;
+      this.isUserLoggedIn = false;*/
 
   }
 }

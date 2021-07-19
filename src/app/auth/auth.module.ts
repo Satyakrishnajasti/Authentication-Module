@@ -26,13 +26,13 @@ import { AuthService } from '../auth/auth-services/auth.service';
         path: 'logout',
         component: LogoutComponent
       },
-      /*{
-        path: '', redirectTo: '/login', pathMatch: 'full'
+      {
+        path: '', redirectTo: 'login', pathMatch: 'full'
       },
 
       {
-        path: '**', redirectTo: '/logout', pathMatch: 'full'
-      }*/
+        path: '**', redirectTo: 'logout', pathMatch: 'full'
+      }
     ])
   ],
   providers: [AuthService]

@@ -7,9 +7,9 @@
         <div class="col-sm-12 field">
           <mat-form-field appearance="standard">
             <mat-label>Username</mat-label>
-            <input matInput formControlName="username">
-            <mat-error *ngIf="formFieldValidator('username')">
-              <span *ngIf="field.username.errors?.required">Form field cannot empty</span>
+            <input matInput formControlName="userName">
+            <mat-error *ngIf="formFieldValidator('userName')">
+              <span *ngIf="field.userName.errors?.required">Form field cannot empty</span>
             </mat-error>
           </mat-form-field>
         </div>

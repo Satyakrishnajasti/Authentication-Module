@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth-guard/auth.guard';
+import { ExpenseComponent } from './expense/expense.component';
 
 const routes: Routes = [
   {
@@ -9,9 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: '',
-    canActivate: [AuthGuard],
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    path: 'expense', component: ExpenseComponent, canActivate: [AuthGuard]
   }
 ];
 
