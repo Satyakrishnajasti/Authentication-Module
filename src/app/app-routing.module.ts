@@ -11,6 +11,13 @@ const routes: Routes = [
 
   {
     path: 'expense', component: ExpenseComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: '', redirectTo: 'expense', pathMatch: 'full'
+  },
+
+  {
+    path: '**', redirectTo: 'expense', pathMatch: 'full'
   }
 ];
 

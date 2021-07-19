@@ -31,7 +31,7 @@ import { AuthService } from '../auth/auth-services/auth.service';
       },
 
       {
-        path: '**', redirectTo: 'logout', pathMatch: 'full'
+        path: '**', redirectTo: 'login', pathMatch: 'full'
       }
     ])
   ],

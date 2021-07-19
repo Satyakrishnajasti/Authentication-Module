@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   login!: FormGroup;
 
-  userName!: string;
+  username!: string;
   password!: string;
 
   ngOnInit(): void {
@@ -38,13 +38,13 @@ export class LoginComponent implements OnInit {
 
   onClickSubmit(data: any) {
     if (this.login.invalid) return
-    this.userName = data.userName;
+    this.username = data.userName;
     this.password = data.password;
 
-    console.log("Login page " + this.userName);
+    console.log("Login page " + this.username);
     console.log("Login page " + this.password);
 
-    this.service.login(this.userName, this.password).subscribe(
+    this.service.login(this.username, this.password).subscribe(
       data => {
         console.log("Is Login Success " + data);
 

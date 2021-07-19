@@ -6,16 +6,17 @@
   </div>
 
   <ng-template #isLogout>
-    <a routerLink='auth/login' class="btn">Login</a>
+    <a routerLink='/auth/login' class="btn">Login</a>
   </ng-template>
-
-
 
 </mat-toolbar>
 
 
 
 <div class="container-fluid">
+
+  <h2>Expense Entry List</h2>
+
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="position">

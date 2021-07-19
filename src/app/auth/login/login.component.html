@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container-fluid background">
   <div class="form">
     <form [formGroup]="login" (ngSubmit)="onClickSubmit(login.value)">
-      <h2 class="text-center">Login Authentication</h2>
+      <h1 class="text-center title" [ngStyle]="{'font-size':'35px'}">Login</h1>
 
       <div class="row">
         <div class="col-sm-12 field">
