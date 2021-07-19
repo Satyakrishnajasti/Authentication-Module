@@ -31,8 +31,10 @@ export class LoginComponent implements OnInit {
   }
 
   formFieldValidator(val: string) {
-    return this.login.get('val')?.invalid || this.login.get('val')?.untouched;
+    return this.login.get(val)?.invalid || this.login.get(val)?.untouched;
   }
+
+
 
   onClickSubmit(data: any) {
     if (this.login.invalid) return
@@ -43,10 +45,10 @@ export class LoginComponent implements OnInit {
     console.log("Login page " + this.password);
 
     this.service.login(this.userName, this.password).subscribe(
-      data=>{
-        console.log("Is Login Success " +data);
+      data => {
+        console.log("Is Login Success " + data);
 
-        if(data) this.router.navigate(['/expense']);
+        if (data) this.router.navigate(['/expense']);
       });
   }
 

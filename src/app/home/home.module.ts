@@ -21,10 +21,10 @@ import { MaterialModule } from '../material/material.module';
       {
         path: '',
         component: MainComponent,
-        children:[
+        children: [
           {
-            path:'',
-            loadChildren:() => import ('./main/dashboard/dashboard.module').then(m=>m.DashboardModule)
+            path: '',
+            loadChildren: () => import('./main/dashboard/dashboard.module').then(m => m.DashboardModule)
           }
         ]
       }

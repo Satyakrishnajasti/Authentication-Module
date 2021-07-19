@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean | UrlTree {
     let url: string = state.url;
-    return true;
+    return this.checkLogin(url);
   }
 
   checkLogin(url: string): any {
@@ -27,7 +27,7 @@ export class AuthGuard implements CanActivate {
     let val: any = localStorage.getItem('isUserLoggedIn');
 
     if (val != null && val == "true") {
-      if (url == "/login") {
+      if (url == "auth/login") {
         this.router.parseUrl('/expense');
       }
 
@@ -36,7 +36,7 @@ export class AuthGuard implements CanActivate {
     }
 
     else {
-      return this.router.parseUrl('/login');
+      return this.router.parseUrl('auth/login');
     }
   }
 
