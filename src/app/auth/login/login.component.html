@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="login" (ngSubmit)="onClickSubmit(login.value)">
+      <h2 class="text-center">Login Authentication</h2>
+
+      <div class="row">
+        <div class="col-sm-12 field">
+          <mat-form-field appearance="standard">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username">
+            <mat-error *ngIf="formFieldValidator('username')">
+              <span *ngIf="field.username.errors?.required">Form field cannot empty</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 field">
+          <mat-form-field appearance="standard">
+            <mat-label>Password</mat-label>
+            <input [type]="hide ? 'password' :'text'" matInput formControlName="password" autocomplete="on">
+
+            <a mat-icon-button matSuffix (click)="hide =!hide" [attr.aria-label]="'Hide password'"
+              [attr.aria.pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </a>
+            <mat-error *ngIf="formFieldValidator('password')">
+              <span *ngIf="field.password.errors?.required">Form field cannot empty</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+
+</div>
