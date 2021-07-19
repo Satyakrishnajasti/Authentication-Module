@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MaterialModule } from './material/material.module';
+import {MaterialModule} from '../app/material/material.module';
 
 import { HeaderComponent } from '../app/header/header.component';
 import { FooterComponent } from '../app/footer/footer.component';
 import { ExpenseComponent } from './expense/expense.component';
-import { MatTableModule } from '@angular/material/table';
+
 
 
 @NgModule({
@@ -24,9 +24,7 @@ import { MatTableModule } from '@angular/material/table';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    MaterialModule,
-    MatTableModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

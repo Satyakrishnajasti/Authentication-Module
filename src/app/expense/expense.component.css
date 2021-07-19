@@ -6,3 +6,15 @@ table{
   color:white;
   text-decoration: none;
 }
+
+th.mat-sort-header-sorted{
+  color:black;
+}
+
+td,th{
+  width:25%;
+}
+
+.mat-form-field{
+  width:100%;
+}
