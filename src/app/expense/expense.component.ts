@@ -51,8 +51,6 @@ export class ExpenseComponent implements OnInit, AfterViewInit {
   isUserLoggedIn = false;
 
   ngOnInit(): void {
-    this.dataSource.sort = this.sort;
-
     let storeData = localStorage.getItem("isUserLoggedIn");
     console.log("StoreData" + storeData);
 

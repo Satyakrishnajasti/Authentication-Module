@@ -1,13 +1,19 @@
 <mat-toolbar color="primary">
   <span>Authentication</span>
 
-  <div *ngIf="isUserLoggedIn; else isLogout">
-    <a routerLink='/auth/logout' class="btn">Logout</a>
-  </div>
+  <button class="menu" mat-button [mat-menu-trigger-for]="menu">Settings</button>
 
-  <ng-template #isLogout>
-    <a routerLink='/auth/login' class="btn">Login</a>
-  </ng-template>
+  <mat-menu #menu="matMenu">
+    <div *ngIf="isUserLoggedIn; else isLogout">
+      <a routerLink='/auth/logout' class="btn">Logout</a>
+    </div>
+
+    <ng-template #isLogout>
+      <a routerLink='/auth/login' class="btn">Login</a>
+    </ng-template>
+  </mat-menu>
+
+
 
 </mat-toolbar>
 

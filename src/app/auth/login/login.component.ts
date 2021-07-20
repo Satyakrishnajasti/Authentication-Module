@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   formFieldValidator(val: string) {
-    return this.login.get(val)?.invalid || this.login.get(val)?.untouched;
+    return this.login.get(val)?.invalid || this.login.get(val)?.untouched || this.login.get(val)?.pristine;
   }
 
 

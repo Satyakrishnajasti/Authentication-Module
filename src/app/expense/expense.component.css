@@ -3,7 +3,6 @@ table{
 }
 
 .btn{
-  color:white;
   text-decoration: none;
 }
 
@@ -17,4 +16,8 @@ td,th{
 
 .mat-form-field{
   width:100%;
+}
+
+.menu{
+  margin-left:75rem;
 }
